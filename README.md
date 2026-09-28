@@ -127,34 +127,13 @@ python predict.py       --checkpoint /path/to/ct_fusion_hypergraph_best.pt      
 python scripts/inspect_checkpoint.py /path/to/checkpoint.pt
 ```
 
-A hypergraph CT-Fusion checkpoint should contain parameter groups such as:
-
-```text
-ct_proj.0.weight
-wsi_proj.0.weight
-hglayers.0.lin.weight
-pool.query
-risk_head.0.weight
-```
 
 ## Data availability
 
 Institutional patient-level data are not included in this repository because
 their release may be restricted by institutional review board and data-use
-requirements. Processed features from a public cohort may be distributed
-separately when permitted by the source dataset's terms of use.
-
-## Related software
-
-The complete IMPACT-Fusion framework additionally includes IM-Path and
-Adipose-rad branches. If these components rely on existing laboratory
-repositories or external software (e.g., PyRadiomics), link those resources
-from the associated manuscript and repository documentation.
-
-## Reproducibility note
+requirements.
 
 The repository starts from precomputed CT and WSI representations and
 reproduces the CT-Fusion hypergraph model, training, checkpoint selection,
-and inference stages. Feature-extraction code for upstream foundation models
-should be documented or linked separately if required for full raw-data
-reproducibility.
+and inference stages.
